@@ -5,11 +5,12 @@ import {
   Switch
 } from 'react-router-dom';
 import { Footer, Navbar } from './components/index';
+import './App.css';
 import { Home } from './pages';
 
 function App() {
   return (
-    <div className='bg-dark text-light'>
+    <div className='bg-dark'>
       <Router>
         <Navbar />
         <Switch>

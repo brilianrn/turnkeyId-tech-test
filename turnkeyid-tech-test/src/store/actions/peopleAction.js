@@ -8,7 +8,7 @@ export function setPeople(payload) {
 export function setPeopleAsync(setLoading) {
   return ((dispatch) => {
     axios({
-      url: '/?results=20',
+      url: '/?results=50',
       method: 'GET'
     })
       .then(({ data }) => {
@@ -23,6 +23,25 @@ export function setPeopleAsync(setLoading) {
       })
       .catch(err => {
         console.log(err)
+      })
+  })
+}
+
+export function setPerson(payload) {
+  return { type: 'person/setPerson', payload };
+}
+
+export function serPersonAsync({ id, setLoading }) {
+  return ((dispatch) => {
+    axios({
+      url: '/?gender=male&results=25',
+      method: 'GET'
+    })
+      .then(({ data }) => {
+        console.log(data)
+      })
+      .catch(err => {
+        console.log(err);
       })
   })
 }

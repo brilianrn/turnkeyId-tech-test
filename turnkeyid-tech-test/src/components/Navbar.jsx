@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
+  let genders = ['Male', 'Female'];
   return (
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
-            // src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Challenge16.png/1200px-Challenge16.png"
             src="https://i.imgur.com/YqSY8ed.png"
             alt="logo"
             style={{ width: '90px' }}
@@ -17,13 +18,25 @@ export default function Navbar() {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link h5 active" aria-current="page" href="#">Home</a>
-            <a class="nav-link h5" href="#">Features</a>
-            <a class="nav-link h5" href="#">Pricing</a>
-            <a class="nav-link h5 disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <NavLink exact to="/" activeClassName="menu" style={{ textDecoration: 'none' }} className="text-light list-menu">
+              <p class="nav-link h5">Home</p>
+            </NavLink>
+            <NavLink to="/favorites" activeClassName="menu" style={{ textDecoration: 'none' }} className="text-light list-menu">
+              <p class="nav-link h5">Favorites</p>
+            </NavLink>
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle text text-light h5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gender</a>
+              <div class="dropdown-content">
+                {genders?.map(gender => {
+                  return (
+                    <a href="#">{gender}</a>
+                  )
+                })}
+              </div>
+            </div>
           </div>
         </div>
-        <form class="d-flex">
+        <form class="d-flex ml-2">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
