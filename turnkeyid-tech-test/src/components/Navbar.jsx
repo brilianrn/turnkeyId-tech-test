@@ -18,10 +18,10 @@ export default function Navbar() {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <NavLink exact to="/" activeClassName="menu" style={{ textDecoration: 'none' }} className="text-light list-menu">
+            <NavLink exact to="/" activeClassName="menu" style={{ textDecoration: 'none' }} className="list-menu">
               <p class="nav-link h5">Home</p>
             </NavLink>
-            <NavLink to="/favorites" activeClassName="menu" style={{ textDecoration: 'none' }} className="text-light list-menu">
+            {/* <NavLink to="/favorites" activeClassName="menu" style={{ textDecoration: 'none' }} className="list-menu">
               <p class="nav-link h5">Favorites</p>
             </NavLink>
             <div class="dropdown">
@@ -33,13 +33,13 @@ export default function Navbar() {
                   )
                 })}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
-        <form class="d-flex ml-2">
+        {/* <form class="d-flex ml-2">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        </form> */}
       </div>
     </nav>
   )

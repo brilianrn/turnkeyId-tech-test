@@ -19,7 +19,7 @@ export default function Home() {
       <h2 className="text-light">People List</h2>
       {loading ? <Loading /> :
         <>
-          <div className="row row-cols-1 row-cols-md-4 g-4 mt-1">
+          <div className="row row-cols-1 row-cols-md-5 g-4 mt-1">
             {people.map((person, i) => {
               return (
                 <People person={person} key={i} />
