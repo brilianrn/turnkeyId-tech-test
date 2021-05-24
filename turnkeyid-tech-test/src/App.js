@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import { Footer, Navbar } from './components/index';
 import './App.css';
-import { Home } from './pages';
+import { Home, Detail } from './pages';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/person-detail/:id'>
-            {/* <Detail /> */}
+            <Detail />
           </Route>
           <Route path='/'>
             <Home />
