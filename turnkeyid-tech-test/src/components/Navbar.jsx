@@ -8,7 +8,7 @@ export default function Navbar() {
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
-            src="https://i.imgur.com/YqSY8ed.png"
+            src="https://www.clipartkey.com/mpngs/m/97-978307_transparent-background-people-icon-transparent.png"
             alt="logo"
             style={{ width: '90px' }}
           />
